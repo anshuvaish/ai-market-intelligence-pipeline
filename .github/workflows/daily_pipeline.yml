@@ -30,6 +30,14 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
 
+      # NEW STEP: Securely rebuild the credentials.json file from the vault
+      - name: Create Google Credentials
+        env:
+          GCP_KEY: ${{ secrets.GCP_CREDENTIALS }}
+        run: echo "$GCP_KEY" > credentials.json
+
       # Step D: Run your master script!
       - name: Execute Pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }} # Inject the Gemini key
         run: python main.py
