@@ -17,6 +17,6 @@ An end-to-end, zero-touch ETL data pipeline that automatically aggregates daily 
 * **Presentation:** Google Sheets (Advanced QUERY and Array functions)
 
 ## 📈 Live Presentation Layer
-**[Link to Live Automated Dashboard]**( [https://docs.google.com/spreadsheets/d/1SDo-iyNjnRvKWfubVodxjFXjlbSCRlHuFfP3mFq-l50/edit?usp=sharing] )
+**[Link to Live Automated Dashboard]**( https://docs.google.com/spreadsheets/d/1SDo-iyNjnRvKWfubVodxjFXjlbSCRlHuFfP3mFq-l50/edit?usp=sharing )
 
 *Note: The dashboard updates automatically every day at 7:30 AM IST.*
