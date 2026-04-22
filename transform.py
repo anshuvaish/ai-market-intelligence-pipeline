@@ -3,9 +3,13 @@ from google import genai
 from google.genai import types
 import json
 import time
+import os # NEW: Import the OS library to read hidden environment variables
 
-# 1. Initialize the new API Client
-client = genai.Client(api_key="AIzaSyB5ke5dvM2lkyIHaFXxjFEz83HojwIrJJE")
+# NEW: Fetch the hidden key from the cloud server
+api_key = os.environ.get("GEMINI_API_KEY")
+
+# 1. Initialize the new API Client securely
+client = genai.Client(api_key=api_key)
 
 def extract_structured_data(text):
     """Passes raw text to the LLM and returns structured JSON."""
